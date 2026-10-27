@@ -32,7 +32,7 @@ git clone https://github.com/Fyxchl/dsh-chinese-reasoning.git
 
 然后在 DSH 中安装该目录作为插件 bundle（`plugin_manager` 的 `install_bundle`，`target` 指向克隆后的绝对路径）。安装后 bundle 会链接进当前 profile，重启后仍然生效。
 
-### 如果你的 dsh 支持从 git 安装
+### 打开桌面端 → 侧栏 插件 → 添加插件，把地址粘进输入框 → 点 安装
 
 `plugin_manager` 的 `target` 接受安装 spec，部分版本可用：
 
