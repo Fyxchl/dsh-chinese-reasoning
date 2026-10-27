@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Chinese Reasoning",
+    "description": "Adds a reasoning-language preference to the system prompt so the model always thinks in Simplified Chinese."
+  }
+}

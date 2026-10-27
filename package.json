@@ -1,0 +1,42 @@
+{
+  "name": "@local/chinese-reasoning",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Keep the model's internal reasoning in Simplified Chinese.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fyxchl/dsh-chinese-reasoning.git"
+  },
+  "homepage": "https://github.com/Fyxchl/dsh-chinese-reasoning",
+  "bugs": {
+    "url": "https://github.com/Fyxchl/dsh-chinese-reasoning/issues"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "cordis",
+    "plugin",
+    "reasoning",
+    "chinese"
+  ],
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

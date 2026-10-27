@@ -1,0 +1,4 @@
+# Adds one global prompt section that keeps internal reasoning in Chinese.
+- insert:
+    - id: chinese-reasoning
+      name: '@local/chinese-reasoning'

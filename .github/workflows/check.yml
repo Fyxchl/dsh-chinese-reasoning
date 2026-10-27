@@ -1,0 +1,22 @@
+name: check
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: JavaScript syntax
+        run: node --check index.js
+      - name: JSON files
+        run: |
+          node -e "const fs=require('fs'); for (const f of ['package.json','locale/zh.json','locale/en.json']) JSON.parse(fs.readFileSync(f,'utf8')); console.log('JSON OK')"
+      - name: Manifest files exist
+        run: |
+          node -e "const fs=require('fs');const p=JSON.parse(fs.readFileSync('package.json','utf8'));for(const f of ['index.js',p.dsh.bundle.patch,'locale/zh.json','locale/en.json','icon.svg'])if(!fs.existsSync(f))throw new Error('missing '+f);console.log('manifest OK')"
